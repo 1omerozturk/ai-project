@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* style.css */
+
+
+/* .video-background {
+    z-index: -1;
+    background: url("../bgai.gif");
+    background-repeat: no-repeat;
+    object-fit:fill;
+} */
+
+h1 {
+    font-size: 3em;
+    text-decoration: underline;
+    
+}
+
