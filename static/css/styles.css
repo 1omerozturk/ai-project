@@ -583,6 +583,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(165 180 252 / var(--tw-text-opacity));
 }
+.text-indigo-800 {
+  color: #2B49FD;
+}
 
 .text-white {
   --tw-text-opacity: 1;
@@ -597,9 +600,9 @@ body, html {
   overflow: hidden;
 }
 body{
-  background: url("../bgai.gif");
-      background-repeat: no-repeat;
-      background-size: cover;
+  background: url("../bgaiproje.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .video-background {
@@ -610,7 +613,6 @@ body{
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  background: url("../bgai.gif");
 }
 #idloading{
   text-align: center;
@@ -624,11 +626,11 @@ body{
   display: inline-block;
   height: 200px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #000000;
   line-height:200px;
   font-size: 2em;
   background:transparent;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 .loading{
@@ -637,7 +639,7 @@ body{
   width:30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 0 4px 0 #ffffff;
+  box-shadow: 0 4px 0 #000000;
   background: transparent;
   animation: animate1  1s linear infinite;
 }
@@ -679,7 +681,7 @@ transform: rotate(0deg);
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #000000;
   text-align: center;
   z-index: 1;
 }
@@ -689,7 +691,7 @@ transform: rotate(0deg);
     } 
     
    .hidden{
-    visibility: hidden;
+    display: none;
    }
 
     #result{
@@ -697,17 +699,31 @@ transform: rotate(0deg);
       height: auto;
     }
    
-    .header{
+     .header{
       font-family:monospace;
-      line-clamp:10px;
+      margin:10%;
+      user-select: none;
+      position:sticky;
       border-radius: 50%;
       font-weight: bolder;
-      color: #ffffff;
+      color: #000000;
       text-align: center;
-      font-size: 3em;
+      font-size: 4em;
       background:transparent;
-    }
+    } 
+.textdiv{
+  display: ruby-text-container;
+  user-select: none;
+}
+#btnupload{
+background-color: #d1cafb;
+color: #000;
 
+}
+#btnupload:hover{
+background-color: #B01DFE;
+color:#fff
+}
     .loader-wrapper {
       display: inline-block;
       width:60px;

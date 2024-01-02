@@ -6,33 +6,36 @@
     <title>Title Extractor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='/css/styles.css') }}"
-    />
-    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
     
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/styles.css') }}"
+    />
   </head>
   <body>
     <!-- <div class="video-background">
     </div>  -->
     <div class="text-center">
-      <div
-        style="margin: 100px;"
+      <div class="textdiv">
+
+        <div
+        id="animasyon-baslik"
         class="header"
-      >
+        >
         EXTRACT TITLE FROM VIDEO
+      </div>
       </div>
 
       <form id="myForm" action="/upload" method="post" enctype="multipart/form-data">
-        <h4 class="text-white" for="video">Choose a video</h4>
+        <h4 class="font-bold text-indigo-800" for="video">Choose a video</h4>
         <br />
         <input
-          style="background-color: white"
+          style="background-color: gray"
           height="50px"
           width="50px"
           class="cursor-pointer font-bold text-dark text-indigo-100"
@@ -46,7 +49,7 @@
         <button
         id="btnupload"
           style="margin-top: 30px"
-          class="btn btn-outline-warning text-black bg-slate-200 text-indigo-900 font-extrabold hover:scale-x-80"
+          class="btn hidden"
           type="submit"
         >
           Upload Video
@@ -73,7 +76,7 @@
 
       <div style="margin: 100px" class="text-center ml-10 my-10">
         {% if video_filename %}
-        <h3 style="margin-bottom: 40px; color: white">Uploaded Video</h3>
+        <h3 style="margin-bottom: 40px; color: black">Uploaded Video</h3>
         <video
           style="margin: auto"
           controls
@@ -96,7 +99,7 @@
 </div>
       <div class="hidden" id="result">
 
-        <h2 style="color: #ffc107; text-align: center; text-decoration: underline">
+        <h2 style="color: #ffc107; text-align: center;">
           Title
         </h2>
         <div
@@ -104,8 +107,8 @@
             margin: auto;
           display:inline-block;
             text-align: center;
-            color: white;
-            border: 3px solid #ffc107;
+            color: black;
+            border: 3px solid #3579FF;
             max-width: 70%;
           "
         >
@@ -123,7 +126,7 @@
           </p>
           </div>
   <h2
-  style="color: #ffc107; text-align: center; text-decoration: underline"
+  style="color: #ffc107; text-align: center;"
   >
         Video Text
       </h2>
@@ -132,8 +135,8 @@
       display:inline-block;
         margin: auto;
         text-align: center;
-        color: white;
-        border: 3px solid #ffc107;
+        color: black;
+        border: 3px solid #3579FF;
         max-width: 70%;
       "
     >
@@ -154,14 +157,24 @@
    
       
       <div id="show2" class="text-center hidden">
-        <a href="/" class="btn btn-outline-info">New Video</a>
+        <a href="/" class="btn btn-outline-info text-blue-950">New Video</a>
       </div>
     </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
     
-   <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}">
+  
+    </script>
+
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+    >
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js">
+
+    </script>
+    
     <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -172,12 +185,6 @@
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"
     ></script>
-    <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-    >
-  </script>
    
   </body>
 </html>

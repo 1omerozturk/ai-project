@@ -9,6 +9,29 @@ const result=document.getElementById("result");
 const myform=document.getElementById("myForm");
 const load=document.getElementById("idloading");
 
+// Başlık Animasyounu
+document.addEventListener("DOMContentLoaded", function() {
+  const baslik = document.getElementById("animasyon-baslik");
+  const metin = baslik.innerHTML;
+  baslik.innerHTML = "";
+
+  for (let i = 0; i < metin.length; i++) {
+    setTimeout(function() {
+      baslik.innerHTML += metin[i];
+      if (i === metin.length - 1) {
+        baslik.style.animation = "yazim-animasyon 1s steps(40, end) forwards";
+        setTimeout(function() {
+          baslik.style.borderRight = "none";
+        }, 1000);
+       }
+    }, i * 110); 
+  }
+});
+
+
+
+// Video seçilmemiş ise
+
 if (uvideo!=null){
 
   uvideo.addEventListener("loadeddata",()=>{
@@ -17,6 +40,13 @@ if (uvideo!=null){
     shw2.classList.remove("hidden");
   });
 }
+video.addEventListener("change",()=>
+{
+  btnup.classList.remove("hidden");
+}
+  );
+
+
 
 btnup.addEventListener("click",function (event) {
   
