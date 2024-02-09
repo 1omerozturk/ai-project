@@ -1,9 +1,11 @@
 # AI Project - Extract Title from Video 
 
-
-<image src="./static/img.png" height="500" width="500">
+<div align="center" style="margin-bottom:100px">
+<image src="./static/img.png"  height="750" width="100%">
 </image>
+</div>
 
-
-<image src="./static/AI.gif" height="500" width="500">
+<div align="center">
+<image src="./static/AI.gif" height="750" width="100%">
 </image>
+</div>
